@@ -1,0 +1,29 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Files ignored by JetBrains IDEs
+.idea/
+.gradle/
+*~
+*.swp
+
+# Build files
+build/
+*/build/
+
+# Local configuration file (VERY IMPORTANT)
+# This ensures your local.properties file (with API keys) is NOT uploaded.
+

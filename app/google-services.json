@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "496382344623",
+    "project_id": "schedulerai-a6c3f",
+    "storage_bucket": "schedulerai-a6c3f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496382344623:android:3c9c44f9b9e7b1acbcc35a",
+        "android_client_info": {
+          "package_name": "com.example.schedulerai_clean"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbGI_vbmf5JbPFaLnqn7uzH3Zi2AuVge4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SchedulerAI_Clean</string>
+    <string name="chat_screen_welcome_message">Welcome to the Chat Screen!</string>
+</resources>
