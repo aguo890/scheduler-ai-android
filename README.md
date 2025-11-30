@@ -4,12 +4,6 @@
 
 This project was developed for the "Software Design for Handheld Devices" course.
 
-## 📸 Demo
-
-*(It is highly recommended to record a short GIF of the app in action and place it here. You can use a tool like Giphy Capture or ScreenToGif.)*
-
-![Demo GIF of Scheduler AI](link_to_your_gif.gif)
-
 ## ✨ Features
 
 *   **Natural Language Processing:** Type commands like *"Lunch with the Professor tomorrow at 12pm"* or *"Team meeting next Friday at 3"* and the app understands.
