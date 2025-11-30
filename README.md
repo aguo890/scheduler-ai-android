@@ -4,6 +4,10 @@
 
 This project was developed for the "Software Design for Handheld Devices" course.
 
+## 📸 Demo
+
+![Image](https://github.com/user-attachments/assets/d1ee6013-fde3-4c82-9250-5e8008542e00)
+
 ## ✨ Features
 
 *   **Natural Language Processing:** Type commands like *"Lunch with the Professor tomorrow at 12pm"* or *"Team meeting next Friday at 3"* and the app understands.
