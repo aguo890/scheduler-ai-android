@@ -1,3 +1,31 @@
+
+## ⚠️ Limitations & Special Instructions
+
+Please be aware of the following requirements and limitations when running the application:
+
+1.  **Firebase Security Rules:** For the chat functionality to work, you must configure the **Realtime Database Rules** in your Firebase project. The default rules are restrictive. Use the following rules to allow any authenticated user to read and write their own chat data:
+    ```json
+    {
+      "rules": {
+        "chats": {
+          "$uid": {
+            ".read": "$uid === auth.uid",
+            ".write": "$uid === auth.uid"
+          }
+        }
+      }
+    }
+    ```
+
+2.  **Device/Emulator Calendar Requirement:** The app's core functionality relies on writing to the native Android Calendar Provider. Therefore, the device or emulator used for testing **must have a Google Account signed in** and the Google Calendar app installed and synced. Without a valid calendar account, the app will not be able to save events.
+
+3.  **AI Specificity:** The app's effectiveness is directly tied to the DeepSeek AI's ability to parse the user's request.
+    *   **Works well with:** Clear, specific commands (e.g., "Meeting tomorrow at 4pm," "Cancel my lunch on Friday").
+    *   **May struggle with:** Highly ambiguous or vague requests (e.g., "that thing next week"). The app will typically respond that it is unsure how to proceed.
+
+4.  **No Event Modification:** The current version of the app supports creating, reading, and deleting calendar events. It does not support modifying existing events (e.g., "move my 2pm meeting to 3pm"). To change an event, the user would need to delete the old one and create a new one.
+
+   
 # Scheduler AI 📅
 
 **Scheduler AI** is an intelligent Android assistant that converts natural language chat messages into real events on your device's native calendar. It bridges the gap between conversational AI and the native Android ecosystem, creating a seamless scheduling experience.
