@@ -55,4 +55,9 @@ dependencies {
 
     // Dependency for using Coroutines with Firebase
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.1")
+    implementation("com.squareup.okhttp3:okhttp:4.11.0") // For API calls
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("com.google.code.gson:gson:2.10.1") // For JSON parsing
+    implementation("com.google.firebase:firebase-database-ktx:20.3.0")
+
 }

@@ -4,16 +4,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.schedulerai_clean.ChatActivity">
+    tools:context=".ChatActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Header Toolbar area -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/chat_screen_welcome_message"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="#F5F5F5"
+        android:gravity="end"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- UPDATED TEXT LINK -->
+        <Button
+            android:id="@+id/viewLogsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/btn_system_logs"
+            android:textSize="12sp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- UPDATED TEXT LINK -->
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="12sp"
+            android:text="@string/btn_settings" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    <LinearLayout
+        android:id="@+id/inputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageButton
+            android:id="@+id/micButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/desc_microphone"
+            android:layout_marginEnd="4dp"/>
+
+        <!-- UPDATED HINT -->
+        <EditText
+            android:id="@+id/inputEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/hint_input"
+            android:background="@android:color/transparent"
+            android:padding="12dp"
+            android:minHeight="48dp"/>
+
+        <!-- UPDATED TEXT LINK -->
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_send" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,9 @@
     package="com.example.schedulerai_clean">  <!-- THIS LINE FIXES EVERYTHING -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- REQUIRED FOR COMPLEXITY 2: Calendar Access -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +36,16 @@
             android:name=".ChatActivity"
             android:exported="false" />
 
+        <!-- You must add these to prevent crashes when navigating -->
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+
+        <activity android:name=".DebugActivity" />
     </application>
 
 </manifest>

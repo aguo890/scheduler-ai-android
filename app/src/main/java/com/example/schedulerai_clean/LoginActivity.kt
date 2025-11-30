@@ -1,5 +1,3 @@
-//LoginActivity.kt
-
 package com.example.schedulerai_clean
 
 import android.content.Intent
@@ -25,38 +23,17 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Initialize Firebase Auth
         auth = Firebase.auth
 
-        // Set OnClick Listeners for the buttons
+        // LOGIN BUTTON
         binding.loginButton.setOnClickListener {
             loginUser()
         }
 
+        // NAVIGATE TO SIGN UP ACTIVITY
         binding.signUpButton.setOnClickListener {
-            registerUser()
-        }
-    }
-
-    private fun registerUser() {
-        val email = binding.emailEditText.text.toString()
-        val password = binding.passwordEditText.text.toString()
-
-        if (email.isBlank() || password.isBlank()) {
-            Toast.makeText(this, "Email and Password cannot be empty.", Toast.LENGTH_SHORT).show()
-            return
-        }
-
-        showLoading(true)
-        lifecycleScope.launch {
-            try {
-                auth.createUserWithEmailAndPassword(email, password).await()
-                Toast.makeText(this@LoginActivity, "Sign up successful! Please log in.", Toast.LENGTH_LONG).show()
-            } catch (e: Exception) {
-                Toast.makeText(this@LoginActivity, e.message, Toast.LENGTH_SHORT).show()
-            } finally {
-                showLoading(false)
-            }
+            val intent = Intent(this, SignUpActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -73,11 +50,11 @@ class LoginActivity : AppCompatActivity() {
         lifecycleScope.launch {
             try {
                 auth.signInWithEmailAndPassword(email, password).await()
-                // Navigate to the main app screen on success
+                // Navigate to Chat
                 startActivity(Intent(this@LoginActivity, ChatActivity::class.java))
-                finish() // Close LoginActivity so user can't go back
+                finish()
             } catch (e: Exception) {
-                Toast.makeText(this@LoginActivity, e.message, Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@LoginActivity, "Login Failed: ${e.message}", Toast.LENGTH_SHORT).show()
                 showLoading(false)
             }
         }
@@ -85,5 +62,6 @@ class LoginActivity : AppCompatActivity() {
 
     private fun showLoading(isLoading: Boolean) {
         binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
+        binding.loginButton.isEnabled = !isLoading
     }
 }

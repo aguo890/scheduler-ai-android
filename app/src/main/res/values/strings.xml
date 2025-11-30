@@ -1,4 +1,18 @@
 <resources>
-    <string name="app_name">SchedulerAI_Clean</string>
-    <string name="chat_screen_welcome_message">Welcome to the Chat Screen!</string>
+    <string name="app_name">Scheduler AI</string>
+
+    <!-- Buttons & UI -->
+    <string name="btn_system_logs">System Logs</string>
+    <string name="btn_settings">Settings</string>
+    <string name="btn_send">Send</string>
+    <string name="hint_input">Type or speak...</string>
+    <string name="desc_microphone">Microphone</string>
+
+    <!-- Voice & Logic Messages -->
+    <string name="speech_prompt">Speak to Orion...</string>
+    <string name="error_speech_not_supported">Speech input not supported on this device</string>
+    <string name="msg_consulting">Orion is consulting your timeline... ⏳</string>
+
+    <!-- The Main Greeting -->
+    <string name="greeting_orion">👋 I am Orion, your Personal Executive Assistant.\n\nI can manage your calendar proactively:\n1. 📅 Book Events\n2. ❌ Cancel Events\n3. 🔍 Find Events\n\nHow can I help you today?</string>
 </resources>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">IA Programador</string>
+
+    <!-- Buttons & UI -->
+    <string name="btn_system_logs">Registros</string>
+    <string name="btn_settings">Configuración</string>
+    <string name="btn_send">Enviar</string>
+    <string name="hint_input">Escribe o habla...</string>
+    <string name="desc_microphone">Micrófono</string>
+
+    <!-- Voice & Logic Messages -->
+    <string name="speech_prompt">Habla con Orion...</string>
+    <string name="error_speech_not_supported">La entrada de voz no es compatible con este dispositivo</string>
+    <string name="msg_consulting">Orion está consultando tu cronograma... ⏳</string>
+
+    <!-- The Main Greeting -->
+    <string name="greeting_orion">👋 Soy Orion, tu Asistente Ejecutivo Personal.\n\nPuedo gestionar tu calendario de forma proactiva:\n1. 📅 Agendar eventos\n2. ❌ Cancelar eventos\n3. 🔍 Buscar eventos\n\n¿Cómo puedo ayudarte hoy?</string>
+</resources>
